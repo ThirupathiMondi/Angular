@@ -1,0 +1,18 @@
+<div class="container-fluid row">
+    <div *ngFor="let l of laptop;" class="col-md-3 mt-2">
+        <div class="card ">
+            <div class="card-header ">
+                <img [src]="l.image" alt="" class="img-fluid card-img-top">
+            </div>
+            <div class="card-body ">
+                <h3> {{l.name}}</h3>
+                <h4>{{l.model}}</h4>
+                <h3>Rs {{l.price}}/-</h3>
+                <p>Available on {{l.available}}</p>
+            </div>
+            <div class="card-footer ">
+                <a mat-button [href]="l.link" class="btn btn-warning">Buy Now</a>
+            </div>
+        </div>
+    </div>
+</div>

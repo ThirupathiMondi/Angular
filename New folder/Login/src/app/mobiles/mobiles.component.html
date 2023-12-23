@@ -1,0 +1,15 @@
+<div class="container-fluid row">
+    <div class="card col-md-3 m-2" *ngFor="let p of product;">
+        <div class="card-header">
+            <img [src]="p.image" alt="" height="300" class="card-img-top">
+        </div>
+        <div class="card-body">
+            <h3> {{p.company}}</h3>
+            <h4>{{p.name}}</h4>
+            <h3> {{p.price | currency:'INR'}}</h3>
+        </div>
+        <div class="card-footer">
+            <a href="www.flipkart.com" class="btn btn-warning">Buy Now</a>
+        </div>
+    </div>
+</div>
