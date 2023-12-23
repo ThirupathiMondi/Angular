@@ -1,0 +1,16 @@
+<div class="container">
+    <form action="" #login_form>
+        <div class="form-group">
+            <label for="name" class="form-label">Username</label>
+            <input type="text" name="userName" id="name" class="form-control" [(ngModel)]="username" required>
+        </div>
+        <div class="form-group">
+            <label for="pwd" class="form-label">Password</label>
+            <input type="text" name="userPassword" id="pwd" class="form-control" [(ngModel)]="password" required>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success" type="button" (click)="login_form.checkValidity() && login()">Login</button>
+            <input class="btn btn-danger" type="reset" value="Reset">
+        </div>
+    </form>
+</div>

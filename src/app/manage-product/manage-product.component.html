@@ -1,0 +1,18 @@
+<div class="container row">
+    <div class="card col-md-3 ms-5 mt-2" *ngFor="let p of products;">
+        <div class="card-header">
+            <img [src]="p.image" alt="" class="card-img-top">
+        </div>
+        <div class="card-body">
+            <h4>{{p.name}}</h4>
+            <h4>{{p.company}}</h4>
+            <h4>{{p.features}}</h4>
+            <s class="text-danger"> <span class="me-2"> {{p.price}}/- </span> </s>
+            <label for="" class="badge bg-success "> <span class="h6"> {{p.price*0.95 -1}}/- </span></label>
+        </div>
+        <div class="card-footer">
+            <button type="button" class="btn btn-warning me-2">Update</button>
+            <button type="button" class="btn btn-danger " (click)="delete(p)">Delete</button>
+        </div>
+    </div>
+</div>
